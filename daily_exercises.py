@@ -31,6 +31,7 @@ def triangle_input():
     side1 = int(input("Please enter a length for a side"))
     side2 = int(input("Enter another length for the second side"))
     side3 = int(input("Enter another length for the third side"))
+    print("Can you form a triangle?")
     is_triangle(side1, side2, side3)
 
 
@@ -38,24 +39,36 @@ def triangle_input():
 def computer_input():
     print("Let's play rock, paper, scissors!")
     print("Pick rock, paper, or scissors")
-    random.randint(1, 3)
+    computer_choice = random.randint(1, 3)
+    print(computer_choice)
     rock = 1
     paper = 2
     scissors = 3
+    if computer_choice == 1:
+        print("The computer picked rock")
+    elif computer_choice == 2:
+        print("The computer chose paper")
+    else:
+        print("The computer picked scissors")
 
 
-def rock_paper_scissors(rock, paper, scissors):
+def rock_paper_scissors(computer_choice):
     computer_input()
+    user_choice = input(int("Choose 1 for rock, 2 fo paper, or 3 for rock"))
 
 
 def main():
-    num = int(input("Pick a number"))
-    check = int(input("Pick another number"))
-    if is_divisible(num, check):
-        print("True")
-    else:
-        print("False")
-    triangle_input()
-    rock_paper_scissors()
+    # num = int(input("Pick a number"))
+    # check = int(input("Pick another number"))
+    # if is_divisible(num, check):
+    #     print("True")
+    # else:
+    #     print("False")
+    # triangle_input()
+    computer_choice = random.randint(1, 3)
+    rock_paper_scissors(computer_choice)
+
+
+
 
 main()
