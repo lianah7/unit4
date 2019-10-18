@@ -54,8 +54,7 @@ def computer_input():
 
 def rock_paper_scissors(computer_choice):
     computer_input()
-    user_choice = input(int("Choose 1 for rock, 2 fo paper, or 3 for rock"))
-
+    user_choice = input(int(1, 3)
 
 def main():
     # num = int(input("Pick a number"))
@@ -67,7 +66,6 @@ def main():
     # triangle_input()
     computer_choice = random.randint(1, 3)
     rock_paper_scissors(computer_choice)
-
 
 
 
