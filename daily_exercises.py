@@ -4,14 +4,16 @@
 
 import random
 
-# exercise one
-number = int(input("Pick a number"))
-if (number % 2) == 1:
-    print("The number is odd")
-else:
-    print("The number is even")
+
+# # exercise one
+# number = int(input("Pick a number"))
+# if (number % 2) == 1:
+#     print("The number is odd")
+# else:
+#     print("The number is even")
 
 # exercise two
+
 def is_divisible(num1, num2):
     if num1 % num2 == 0:
         return True
@@ -41,9 +43,6 @@ def computer_input():
     print("Pick rock, paper, or scissors")
     computer_choice = random.randint(1, 3)
     print(computer_choice)
-    rock = 1
-    paper = 2
-    scissors = 3
     if computer_choice == 1:
         print("The computer picked rock")
     elif computer_choice == 2:
@@ -68,25 +67,29 @@ def rock_paper_scissors(computer_choice):
     else:
         print("You won!")
 
-def driving_fast():
-    speed = int(input("Pick a number between one and one hundred"))
-    if speed <= 60:
-        print("You don't get a ticket")
-    elif speed >= 61 or <= 80:
 
+def driving(speed, birthday):
+    if birthday:
+        speed = speed - 5
+    if speed <= 61:
+        return 0
+    elif 61 <= speed <= 80:
+        return 1
+    else:
+        return 2
 
 
 def main():
-    # num = int(input("Pick a number"))
-    # check = int(input("Pick another number"))
-    # if is_divisible(num, check):
-    #     print("True")
-    # else:
-    #     print("False")
-    # triangle_input()
+    num = int(input("Pick a number"))
+    check = int(input("Pick another number"))
+    if is_divisible(num, check):
+        print("True")
+    else:
+        print("False")
+    triangle_input()
     computer_choice = random.randint(1, 3)
     rock_paper_scissors(computer_choice)
-    driving_fast()
+    print(driving(75, True))
 
 
 main()
