@@ -68,6 +68,13 @@ def rock_paper_scissors(computer_choice):
     else:
         print("You won!")
 
+def driving_fast():
+    speed = int(input("Pick a number between one and one hundred"))
+    if speed <= 60:
+        print("You don't get a ticket")
+    elif speed >= 61 or <= 80:
+
+
 
 def main():
     # num = int(input("Pick a number"))
@@ -79,6 +86,7 @@ def main():
     # triangle_input()
     computer_choice = random.randint(1, 3)
     rock_paper_scissors(computer_choice)
+    driving_fast()
 
 
 main()
