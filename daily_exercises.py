@@ -54,7 +54,20 @@ def computer_input():
 
 def rock_paper_scissors(computer_choice):
     computer_input()
-    user_choice = input(int(1, 3)
+    user_choice = int(input("Pick a number between 1 and 3"))
+    if user_choice == 1:
+        print("You picked rock")
+    elif user_choice == 2:
+        print("You picked paper")
+    else:
+        print("You chose scissors")
+    if user_choice == computer_choice:
+        print("Draw")
+    elif user_choice >= computer_choice:
+        print("You lost! Try again")
+    else:
+        print("You won!")
+
 
 def main():
     # num = int(input("Pick a number"))
@@ -66,7 +79,6 @@ def main():
     # triangle_input()
     computer_choice = random.randint(1, 3)
     rock_paper_scissors(computer_choice)
-
 
 
 main()
